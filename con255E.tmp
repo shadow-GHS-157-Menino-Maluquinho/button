@@ -1,0 +1,130 @@
+[gd_scene load_steps=9 format=3 uid="uid://be4tqs72dbnke"]
+
+[ext_resource type="FontFile" uid="uid://1pkpikrd8ms6" path="res://Atkinson_Hyperlegible_Mono/AtkinsonHyperlegibleMono-VariableFont_wght.ttf" id="1_uqef0"]
+[ext_resource type="Texture2D" uid="uid://h06dk4c64akt" path="res://fesf.png" id="2_xkc1y"]
+[ext_resource type="Texture2D" uid="uid://rqj77dt8rfpj" path="res://botsaaaaa (1).png" id="3_0lkf0"]
+[ext_resource type="Script" path="res://acessarconfig.gd" id="3_f6lxt"]
+[ext_resource type="Texture2D" uid="uid://dcvtu2toe0s36" path="res://feesf.png" id="4_e0dj4"]
+[ext_resource type="Script" path="res://jogar.gd" id="5_yxijk"]
+[ext_resource type="Texture2D" uid="uid://dqdgjncc66y6x" path="res://circulo de progresso.png" id="6_d08uq"]
+[ext_resource type="Script" path="res://sair.gd" id="7_ms66l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 7.0
+offset_right = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.310216, 0.371457, 0.591671, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.365
+anchor_top = 0.877
+anchor_right = 0.591
+anchor_bottom = 0.938
+offset_left = 0.519989
+offset_top = -0.296021
+offset_right = -167.832
+offset_bottom = 0.175964
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+text = "feito por "
+
+[node name="Button" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Games Engeni"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48
+anchor_top = 0.19
+anchor_right = 0.48
+anchor_bottom = 0.19
+offset_left = -154.96
+offset_top = -46.12
+offset_right = -83.96
+offset_bottom = -23.12
+theme_override_fonts/font = ExtResource("1_uqef0")
+theme_override_font_sizes/font_size = 70
+text = "GAME AR"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.465
+anchor_top = 0.558
+anchor_right = 0.465
+anchor_bottom = 0.558
+offset_left = -325.68
+offset_top = -151.584
+offset_right = 374.32
+offset_bottom = 156.416
+theme_override_constants/separation = 40
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_xkc1y")
+flat = true
+script = ExtResource("3_f6lxt")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="HBoxContainer/Button2"]
+layout_mode = 2
+offset_left = 240.0
+offset_right = 540.0
+offset_bottom = 308.0
+fill_mode = 4
+texture_progress = ExtResource("6_d08uq")
+tint_progress = Color(0.380392, 0.894118, 0, 1)
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_0lkf0")
+flat = true
+script = ExtResource("5_yxijk")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.497
+anchor_right = 0.5
+anchor_bottom = 0.497
+offset_left = -151.5
+offset_top = -150.076
+offset_right = 148.5
+offset_bottom = 149.924
+fill_mode = 4
+texture_progress = ExtResource("6_d08uq")
+tint_progress = Color(0.380392, 0.894118, 0, 1)
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_e0dj4")
+flat = true
+script = ExtResource("7_ms66l")
+
+[node name="TextureProgressBar3" type="TextureProgressBar" parent="HBoxContainer/Button3"]
+layout_mode = 2
+offset_left = -273.0
+offset_right = 27.0
+offset_bottom = 308.0
+fill_mode = 4
+texture_progress = ExtResource("6_d08uq")
+tint_progress = Color(0.380392, 0.894118, 0, 1)

@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://nywf5wr6snhr"]
+
+[ext_resource type="FontFile" uid="uid://d2mys12wq26lf" path="res://Atkinson_Hyperlegible_Mono/AtkinsonHyperlegibleMono-Italic-VariableFont_wght.ttf" id="1_1h8pp"]
+[ext_resource type="Script" path="res://voltardosmodosdejogo.gd" id="3_hytob"]
+
+[sub_resource type="GDScript" id="GDScript_e0dgg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.309804, 0.372549, 0.592157, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 69.0
+offset_right = 1039.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("1_1h8pp")
+theme_override_font_sizes/font_size = 60
+text = "SELECIONE O MODO DE JOGO"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 243.0
+offset_right = 373.0
+offset_bottom = 377.0
+theme_override_font_sizes/font_size = 20
+text = "TUTORIAL"
+script = SubResource("GDScript_e0dgg")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 243.0
+offset_right = 730.0
+offset_bottom = 377.0
+theme_override_font_sizes/font_size = 20
+text = "MODO PROGRESSIVO"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 242.0
+offset_right = 1094.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 20
+text = "PERSONALIZADO"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 554.0
+offset_right = 204.0
+offset_bottom = 629.0
+text = "< VOLTAR"
+script = ExtResource("3_hytob")
